@@ -19,10 +19,20 @@ main{overflow-x:clip}
 .scroll-reveal:focus-within{opacity:1!important;transform:none!important;filter:none!important}
 @media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}}
 @media print{.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}}
-</style></head><body>
+
+/* Editorial rhythm: a pinned career heading and a live reading position. */
+.page-progress{position:fixed;z-index:30;top:0;left:0;width:100%;height:3px;background:#315c91;transform:scaleX(var(--page-progress,0));transform-origin:left;pointer-events:none}
+.career-position{display:flex;align-items:center;gap:12px;margin-top:30px;font:12px "Segoe UI",Arial,sans-serif;color:var(--muted)}
+.career-position .track{height:2px;width:88px;background:var(--line);overflow:hidden}.career-position .track span{display:block;width:100%;height:100%;background:var(--green);transform:scaleX(var(--career-progress,0));transform-origin:left;transition:transform .25s ease}
+.career-position strong{color:var(--green);font-weight:600}.job{position:relative}.job:before{content:"";position:absolute;left:-19px;top:30px;bottom:25px;width:2px;background:var(--green);opacity:0;transform:scaleY(.4);transition:opacity .35s ease,transform .5s ease}.job:first-child:before{top:4px}.job.is-reading:before{opacity:1;transform:scaleY(1)}
+@media(min-width:901px){#experience{display:grid;grid-template-columns:285px minmax(0,1fr);gap:60px;align-items:start}#experience .sectionhead{display:block;position:sticky;top:70px;margin-bottom:0}#experience .sectionhead .eyebrow{margin-bottom:25px;padding:0}#experience .sectionhead h2{font-size:42px;letter-spacing:-1.6px;line-height:1.1}#experience .sectionintro{margin-top:24px;line-height:1.8}#experience .experience{margin-left:0}#experience .job{padding-top:35px;padding-bottom:35px}#experience .job:first-child{padding-top:0}}
+@media(max-width:900px){.career-position{display:none}.job:before{left:-12px}}
+@media(prefers-reduced-motion:reduce){.career-position .track span,.job:before{transition:none}}
+@media print{.page-progress,.career-position,.job:before{display:none}#experience{display:block}#experience .sectionhead{position:static}}
+</style></head><body><div class="page-progress" aria-hidden="true"></div>
 <header class="wrap"><nav class="nav" aria-label="Main navigation"><a class="brand" href="#home">Ahmed Eldeeb<span> /</span></a><button class="mobile" id="menu" aria-expanded="false" aria-controls="navlinks">Menu ☰</button><div class="navlinks" id="navlinks"><a href="#experience">Experience</a><a href="#skills">Expertise</a><a href="#education">Education</a><a href="#contact">Contact</a><a class="download" href="Ahmed-Eldeeb-CV.pdf" download>Download CV <span aria-hidden="true">↗</span></a></div></nav></header>
 <main id="home"><div class="wrap"><section class="hero" aria-label="About Ahmed"><div><div class="eyebrow"><span class="dot"></span> Irrigation / Design / Engineering</div><h1>Ahmed<br><span>Eldeeb.</span></h1><p class="role">Irrigation Engineer</p><p class="intro">Turning irrigation requirements into coordinated, buildable systems. Working in irrigation engineering since 2019, with experience in network design, hydraulic analysis and technical delivery — from tender drawings to site support.</p><div class="actions"><a class="download" href="Ahmed-Eldeeb-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a><a class="textlink" href="#experience">Explore my experience ↘</a></div><p class="location">AL HARAM, GIZA · EGYPT</p></div><div class="drawing" role="img" aria-label="Illustrative irrigation network with branching pipes and sprinkler coverage patterns"><svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" stroke="#b6c7dd" stroke-width=".5"/></pattern><pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".6" fill="#839dbd"/></pattern></defs><rect width="500" height="500" fill="url(#grid)"/><path d="M90 110H422V390H80V178Q80 110 90 110Z" fill="#f5f7fa" fill-opacity=".48" stroke="#aabed7"/><path d="M125 155H385V235H125Z" fill="url(#dots)"/><path d="M125 275H385V355H125Z" fill="url(#dots)"/><g stroke="#6989b0" stroke-width=".9" stroke-dasharray="3 4"><circle cx="155" cy="195" r="53"/><circle cx="255" cy="195" r="53"/><circle cx="355" cy="195" r="53"/><circle cx="155" cy="315" r="53"/><circle cx="255" cy="315" r="53"/><circle cx="355" cy="315" r="53"/></g><g stroke="#365c8b" stroke-width="1.2"><path d="M105 195H355M105 315H355"/><path d="M155 188V202M148 195H162M255 188V202M248 195H262M355 188V202M348 195H362M155 308V322M148 315H162M255 308V322M248 315H262M355 308V322M348 315H362"/></g><path d="M65 420V255H105M105 195V315" stroke="#18385f" stroke-width="4"/><g fill="#eef3f9" stroke="#18385f" stroke-width="1.5"><circle cx="105" cy="255" r="9"/><path d="M105 249V261M99 255H111"/><rect x="54" y="409" width="22" height="22" rx="2"/></g><path d="M145 377H385M145 373V381M385 373V381" stroke="#90a7c4" stroke-width=".8"/><text x="249" y="391" fill="#526d90" font-size="8" font-family="monospace">NETWORK LAYOUT</text><path d="M446 95V65M440 77L446 65L452 77" stroke="#36577e" stroke-width="1.4"/><text x="443" y="56" fill="#36577e" font-size="10" font-family="monospace">N</text><text x="126" y="133" fill="#526d90" font-size="8" font-family="monospace">ZONE 01 / SPRINKLER COVERAGE</text><text x="126" y="272" fill="#526d90" font-size="8" font-family="monospace">ZONE 02</text><text x="122" y="250" fill="#36577e" font-size="8" font-family="monospace">CONTROL VALVE</text></svg><div class="drawlabel"><span>IRRIGATION STUDY / ILLUSTRATION</span><span>AE — 01</span></div></div></section><div class="ribbon"><div><strong>Since 2019</strong><span>Experience in irrigation engineering</span></div><div><strong>Design to delivery</strong><span>Tender · Shop drawings · As-built</span></div><div><strong>Technical leadership</strong><span>Quality · Coordination · Team development</span></div></div>
-<section class="section" id="experience"><div class="sectionhead"><div class="eyebrow">01 / Career</div><div><h2>Experience that<br>connects the details.</h2><p class="sectionintro">Technical office, design and leadership roles across irrigation engineering.</p></div></div><div class="experience">
+<section class="section" id="experience"><div class="sectionhead"><div class="eyebrow">01 / Career</div><div><h2>Experience that<br>connects the details.</h2><p class="sectionintro">Technical office, design and leadership roles across irrigation engineering.</p><div class="career-position" aria-hidden="true"><strong id="career-index">01</strong><span class="track"><span></span></span><span>05</span></div></div></div><div class="experience">
 <article class="job"><div><h3>Sr. Technical Office Engineer <span class="current">CURRENT</span></h3><p class="company">DME Holding · Heliopolis, Cairo</p></div><div class="date">NOV 2024 — PRESENT</div><ul><li>Prepare irrigation shop drawings, as-built drawings, calculation sheets, schedules and pump calculations.</li><li>Review designs and technical documents for compliance with project specifications and required standards.</li><li>Coordinate with site engineers and other disciplines, providing technical support and resolving site issues.</li><li>Track project progress, technical submissions and compliance with applicable codes and safety standards.</li></ul></article>
 <article class="job"><div><h3>Technical Office Team Leader</h3><p class="company">Typical Design · Maadi, Giza</p></div><div class="date">JUN 2023 — NOV 2024</div><ul><li>Discuss project objectives with clients and review designs, specifications and design criteria before delivery.</li><li>Select irrigation equipment, methods and materials to suit project requirements and water availability.</li><li>Plan team workloads, distribute assignments, and support training, coaching and professional development.</li></ul><details><summary>More responsibilities</summary><ul><li>Define project management processes and prioritize daily tasks to meet delivery targets.</li><li>Resolve operational challenges, conflicts and coordination issues across projects.</li><li>Collaborate with senior leadership on best practices and improvements to team performance.</li></ul></details></article>
 <article class="job"><div><h3>Technical Office Engineer</h3><p class="company">Orascom Services · Nile City Towers, Cairo</p></div><div class="date">NOV 2020 — JUN 2023</div><ul><li>Develop tender designs, irrigation shop drawings and final as-built documentation using RainCAD.</li><li>Design farm irrigation networks, pump and filtration units, and analyse mainline networks using WaterGEMS.</li><li>Prepare calculation sheets, project schedules and pump calculations, and follow up implementation.</li></ul><details><summary>More responsibilities</summary><ul><li>Support sales teams and prepare Material Approval Requests (MARs).</li><li>Deliver training for students and recent graduates on irrigation products and network design.</li></ul></details></article>
@@ -44,11 +54,13 @@ main{overflow-x:clip}
     ['.contactlinks',50]
   ];
   const items=[];let frame=0,needsMeasure=true;
+  const jobs=[...document.querySelectorAll('.job')],careerIndex=document.getElementById('career-index');
   const clamp=n=>Math.max(0,Math.min(1,n));
   const ease=n=>n*n*(3-2*n);
   function absoluteTop(el){let top=0;for(let node=el;node;node=node.offsetParent)top+=node.offsetTop;return top;}
   groups.forEach(([selector,x])=>{
     document.querySelectorAll(selector).forEach((el,i)=>{
+      if(selector.startsWith('.sectionhead')&&el.closest('#experience'))return;
       const direction=(selector==='.job'||selector==='.courses > p')&&i%2?-x:x;
       items.push({el,x:direction,top:0,height:0,last:-1});
       el.classList.add('scroll-reveal');
@@ -61,20 +73,27 @@ main{overflow-x:clip}
   function update(){
     frame=0;if(needsMeasure)measure();
     const h=window.innerHeight,y=window.scrollY,mobile=window.innerWidth<=650;
+    const total=document.documentElement.scrollHeight-h;
+    document.documentElement.style.setProperty('--page-progress',total>0?clamp(y/total):0);
+    let nearest=0,distance=Infinity;
+    jobs.forEach((job,i)=>{const item=items.find(item=>item.el===job);if(item){const d=Math.abs(item.top-y+Math.min(item.height/2,180)-h*.45);if(d<distance){distance=d;nearest=i;}}});
+    jobs.forEach((job,i)=>job.classList.toggle('is-reading',i===nearest));
+    careerIndex.textContent=String(nearest+1).padStart(2,'0');
+    document.documentElement.style.setProperty('--career-progress',(nearest+1)/jobs.length);
     items.forEach(item=>{
       const top=item.top-y,bottom=top+item.height;
       const enter=clamp((h*.97-top)/(h*.30));
       const leave=clamp((bottom-h*.045)/(h*.23));
       const p=reduced.matches?1:ease(Math.min(enter,leave));
       if(Math.abs(p-item.last)<.0005)return;item.last=p;
-      const hidden=1-p,limit=mobile?24:Math.abs(item.x);
+      const hidden=1-p,limit=mobile?20:Math.min(44,Math.abs(item.x));
       const dx=Math.sign(item.x)*limit*hidden;
       const dy=(enter<leave?24:-20)*hidden;
       item.el.style.setProperty('--scroll-opacity',p.toFixed(4));
       item.el.style.setProperty('--scroll-x',dx.toFixed(2)+'px');
       item.el.style.setProperty('--scroll-y',dy.toFixed(2)+'px');
-      item.el.style.setProperty('--scroll-scale',(1-.025*hidden).toFixed(4));
-      item.el.style.setProperty('--scroll-blur',(hidden*2).toFixed(2)+'px');
+      item.el.style.setProperty('--scroll-scale',(1-.015*hidden).toFixed(4));
+      item.el.style.setProperty('--scroll-blur','0px');
     });
   }
   function schedule(){if(!frame)frame=requestAnimationFrame(update);}
